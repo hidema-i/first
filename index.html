@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sample-portfolio/styles/vendors/bs-reboot.css">
+    <link rel="stylesheet" href="sample-portfolio/styles/vendors/swiper.min.css"/>
+    <link rel="stylesheet" href="/sample-portfolio/styles/style.css" />
+    <!-- <link rel="stylesheet" href="styles/style.css" /> -->
   </head>
-  <body></body>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <div id="content">
+          <div class="hero">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="hero__title">TEST ANIMAL</div>
+                  <img src="/sample-portfolio/images/cat.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">TEST ANIMAL</div>
+                  <img src="/sample-portfolio/images/dog.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">TEST ANIMAL</div>
+                  <img src="/sample-portfolio/images/lion.jpg" alt="" />
+                </div>
+            </div>
+            <div class="hero__footer">
+              <img class="hero__downarrow" src="sample-portfolio/images/arrow.svg">
+              <span class="hero__scrolltext">scroll</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider main container -->
+
+    <script src="sample-portfolio/scripts/vendor/swiper.min.js"></script>
+    <script src="sample-portfolio/scripts/libs/hero-slider.js"></script>
+    <script src="sample-portfolio/scripts/main.js"></script>
+  </body>
 </html>

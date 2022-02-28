@@ -1,0 +1,31 @@
+@import "modules/variables";
+@import "modules/mixin";
+@import "modules/hero-slider";
+
+//mobileのsizeを基本のbaseとする（mobile First）
+@import "style-breakpoints/base";
+
+//スマホを横向きにした時
+@media (min-width: 480px) {
+  @import "style-breakpoints/480up";
+}
+//タブレット
+@media (min-width: 600px) {
+  @import "style-breakpoints/600up";
+}
+//タブレットを横向きにした場合か小さい端末
+@media (min-width: 960px) {
+  @import "style-breakpoints/960up";
+}
+//通常のdisplay
+@media (min-width: 1280px) {
+  @import "style-breakpoints/1280up";
+}
+//レキナdisplay(最低限の解像度)
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) {
+  @import "style-breakpoints/2x";
+}
+//印刷時
+@media print {
+  @import "style-breakpoints/print";
+}
