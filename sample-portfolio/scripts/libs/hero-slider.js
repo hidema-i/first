@@ -7,7 +7,7 @@ class HeroSlider {
   _initSwiper() {
     return new Swiper(this.el, {
       // Optional parameters
-      // direction: "vertical",
+      // direction: 'vertical',
       loop: true,
       //hoverの時グローブアイコン
       grabCursor: true,
@@ -21,7 +21,7 @@ class HeroSlider {
       //1024pxを超えた場合は2になる
       breakpoints: {
         1024: {
-          slidedPerView: 2,
+          slidesPerView: 2,
         },
       },
     });

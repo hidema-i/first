@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sample-portfolio/styles/vendors/bs-reboot.css">
     <link rel="stylesheet" href="sample-portfolio/styles/vendors/swiper.min.css"/>
     <link rel="stylesheet" href="/sample-portfolio/styles/style.css" />
@@ -18,7 +16,7 @@
       <div id="container">
         <div id="content">
           <div class="hero">
-            <div class="swiper">
+            <div class="swiper-container">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -41,11 +39,75 @@
             </div>
           </div>
         </div>
+        <div id="main-content">
+          <main>
+            <section class="shops">
+              <div>
+                <h2 class="main-title">Sample Shop</h2>
+                <p class="sub-title">JAPAN NIKE</p>
+              </div>
+              <div class="shops__inner">
+                <div class="shops__item">
+                  <div class="cover-slide hover-darken inview">
+                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop1.jpg);"></div>
+                  </div>
+                  <p class="shop1__title">SHOP 1</p>
+                </div>
+                <div class="shops__item">
+                  <div class="cover-slide hover-darken inview">
+                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop2.jpg);"></div>
+                  </div>
+                  <p class="shops__title">SHOP 2</p>
+                </div>
+                <div class="shops__item">
+                  <div class="cover-slide hover-darken inview">
+                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop3.jpg);"></div>
+                  </div>
+                  <p class="shops__title">SHOP 3</p>
+                </div>
+                <div class="shops__item">
+                  <div class="cover-slide hover-darken inview">
+                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop4.jpg);"></div>
+                  </div>
+                  <p class="shops__title">SHOP 4</p>
+                </div>
+                <div class="shops__item">
+                  <div class="cover-slide hover-darken inview">
+                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop5.jpg);"></div>
+                  </div>
+                  <p class="shops__title">SHOP 5</p>
+                </div>
+                <div class="shops__btn">
+                  <button class="btn slide-bg">Button</button>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
       </div>
     </div>
-    <!-- Slider main container -->
+    <!-- <div class="tween-animate-title">Animation Title</div> -->
+      <!-- <div class="cover-slide hover-darken">
+        <img class="img-zoom" src="sample-portfolio/images/lion.jpg" alt="">
+      </div>
 
+      <button class="btn float">Button</button>
+      <button class="btn filled">Button</button>
+      <button class="btn letter-spacing">Button</button>
+      <button class="btn shadow">Button</button>
+      <button class="btn solid">Button</button>
+      <button class="btn slide-bg">Button</button>
+      <button class="btn cover-3d">
+        <span>Button</span>
+      </button>
+        <a class="btn-cubic"><span class="hovering">Now, Hovering</span><span class="default">Buttotttn</span></a>
+   -->
+    <!-- Slider main container -->
     <script src="sample-portfolio/scripts/vendor/swiper.min.js"></script>
+    <script src="sample-portfolio/scripts/vendor/TweenMax.min.js"></script>
+    <script src="sample-portfolio/scripts/vendor/scroll-polyfill.js"></script>
+    <script src="sample-portfolio/scripts/libs/scroll.js"></script>
+    <script src="sample-portfolio/scripts/libs/textAnimation.js"></script>
     <script src="sample-portfolio/scripts/libs/hero-slider.js"></script>
     <script src="sample-portfolio/scripts/main.js"></script>
   </body>

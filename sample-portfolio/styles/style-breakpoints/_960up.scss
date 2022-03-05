@@ -1,1 +1,28 @@
 //tylesheet: 960px以上のモニタで適用
+//defaultのsizeより少し小さめ
+.font-sm {
+  font-size: 16px;
+}
+//少し大きめ
+.font-md {
+  font-size: 19px;
+}
+//大きめ
+.font-lr {
+  font-size: 23px;
+}
+//上記より大きい
+.font-lg {
+  font-size: 36px;
+}
+
+//margin-bottomを定義
+.mb-lg {
+  //importをつけてこちらを優先させる
+  margin-bottom: 150px !important;
+}
+//padding-bottom定義
+.pb-lg {
+  //importをつけてこちらを優先させる
+  padding-bottom: 150px !important;
+}
