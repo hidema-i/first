@@ -1,1 +1,42 @@
 //Stylesheet: 600px以上のタブレットやモニタで適用
+
+.flex {
+  //600以上は横並び
+  flex-direction: row;
+  //折り返しさせる
+  flex-wrap: wrap;
+}
+
+.shops {
+  &__item {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+    padding: 5px;
+  }
+}
+
+.attention {
+  &__container {
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex-basis: 47%;
+  }
+}
+
+.well-known-store {
+  &__inner {
+    padding: 50px;
+  }
+
+  &__texts,
+  &__img {
+    flex-basis: 47%;
+  }
+
+  &__texts {
+    display: flex;
+    align-items: flex-end;
+  }
+}
