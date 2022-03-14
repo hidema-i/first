@@ -54,6 +54,7 @@ img {
   @extend .font-lg;
   font-weight: 600;
   margin-bottom: 0;
+  display: block;
 }
 .sub-title {
   @extend .font-sm;
@@ -69,6 +70,68 @@ img {
   color: $cTurquoise;
 }
 
+#content {
+  padding-top: $navHei;
+}
+
+#container {
+  background-color: $cWhite;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHei;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 20px;
+
+    & > a {
+      color: $cBlack;
+      text-decoration: none !important;
+      text-transform: uppercase;
+    }
+  }
+
+  & .logo {
+    font-size: 38px;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+}
+
 .well-known-store {
   @extend .content-width;
 
@@ -77,6 +140,8 @@ img {
     justify-content: space-between;
     padding: 15px;
     background-color: $cBgGray;
+    position: relative;
+    z-index: 0;
   }
 
   &__sub {
@@ -86,11 +151,18 @@ img {
   &__img {
     height: 300px;
     @extend .mb-sm;
+    transition: box-shadow 1ms linear 0.8s;
 
     & > img {
       object-fit: cover;
       width: 100%;
       height: 100%;
+      position: relative;
+      z-index: -1;
+    }
+
+    &.inview {
+      box-shadow: inset 0 0 30px $cBlack;
     }
   }
 
@@ -164,5 +236,45 @@ img {
       height: 100%;
       width: 100%;
     }
+  }
+}
+
+.logo {
+  font-size: 42px;
+  display: flex;
+
+  &__img {
+    width: 2.7em;
+  }
+}
+.footer {
+  padding: 60px 0;
+  @extend .content-width;
+
+  &__nav {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__ul {
+    @extend .flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__li {
+    padding: 0;
+    margin: 10px;
+
+    & > a {
+      color: $cSubTitle;
+    }
+  }
+
+  & .logo {
+    font-size: 40px;
+    justify-content: center;
   }
 }

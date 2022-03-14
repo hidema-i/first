@@ -46,3 +46,24 @@
     margin-bottom: 40px;
   }
 }
+.footer {
+  &__li {
+    justify-content: flex-start;
+  }
+}
+
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}

@@ -5,15 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sample-portfolio/styles/vendors/bs-reboot.css">
-    <link rel="stylesheet" href="sample-portfolio/styles/vendors/swiper.min.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="sample-portfolio/styles/vendors/bs-reboot.css"
+    />
+    <link
+      rel="stylesheet"
+      href="sample-portfolio/styles/vendors/swiper.min.css"
+    />
     <link rel="stylesheet" href="/sample-portfolio/styles/style.css" />
     <!-- <link rel="stylesheet" href="styles/style.css" /> -->
   </head>
   <body>
     <div id="global-container">
       <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <div class="nav-trigger"></div>
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">
+              <img
+                src="sample-portfolio/images/logo-sample.svg"
+                alt=""
+                class="logo__img"
+              />
+            </div>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li"><a href="#">Service</a></li>
+                <li class="header__li">
+                  <a class="btn filled" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="mobile-menu__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
         <div id="content">
           <div class="hero">
             <div class="swiper-container">
@@ -32,125 +68,229 @@
                   <div class="hero__title">TEST ANIMAL</div>
                   <img src="/sample-portfolio/images/tora.jpg" alt="" />
                 </div>
-            </div>
-            <div class="hero__footer">
-              <img class="hero__downarrow" src="sample-portfolio/images/arrow.svg">
-              <span class="hero__scrolltext">scroll</span>
+              </div>
+              <div class="hero__footer">
+                <img
+                  class="hero__downarrow"
+                  src="sample-portfolio/images/arrow.svg"
+                />
+                <span class="hero__scrolltext">scroll</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="main-content">
-          <main>
-            <section class="well-known-store">
-              <div class="well-known-store__inner">
-                <div class="well-known-store__img cover-slide">
-                  <img class="img-zoom" src="sample-portfolio/images/World2.jpg" alt="">
-                </div>
-                <div class="well-known-store__texts">
-                  <div class="well-known-store__texts__inner">
-                    <div class="well-known-store__title main-title">
-                      <span class="turquoise-blue">Well,KnownStore</span>
-                      <span>American Store</span>
-                    </div>
-                    <div class="well-known-store__sub sub-title">
-                      Famous overseas stores this time
-                    </div>
-                    <div class="well-known-store__description">
-                      <p>Legendary store in the U.S.<br>
-                         that attracts sneaker lovers from all over the world.</p>
-                    </div>
-                    <div class="well-known-store__btn">
-                    <button class="btn slide-bg">Button</button>
+          <div id="main-content">
+            <main>
+              <section class="well-known-store">
+                <div class="well-known-store__inner">
+                  <div class="well-known-store__img cover-slide">
+                    <img
+                      class="img-zoom"
+                      src="sample-portfolio/images/World2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="well-known-store__texts">
+                    <div class="well-known-store__texts__inner">
+                      <div class="well-known-store__title main-title">
+                        <span class="turquoise-blue">Well,KnownStore</span>
+                        <span>American Store</span>
+                      </div>
+                      <div class="well-known-store__sub sub-title">
+                        Famous overseas stores this time
+                      </div>
+                      <div class="well-known-store__description">
+                        <p>
+                          Legendary store in the U.S.<br />
+                          that attracts sneaker lovers from all over the world.
+                        </p>
+                      </div>
+                      <div class="well-known-store__btn">
+                        <button class="btn slide-bg">Button</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
 
-            <!-- section.famous-stores-abroad -->
-            <section class="shops">
-              <div>
-                <h2 class="main-title">Sample Shop</h2>
-                <p class="sub-title">Recommended Store</p>
-              </div>
-              <!-- 通常は各店舗のリンクをつけるが今回はしない。あくまでサンプル-->
-              <div class="shops__inner">
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop1.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 1</p>
+              <!-- section.famous-stores-abroad -->
+              <section class="shops">
+                <div>
+                  <h2 class="main-title">Sample Shop</h2>
+                  <p class="sub-title">Recommended Store</p>
                 </div>
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop2.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 2</p>
-                </div>
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop3.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 3</p>
-                </div>
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop4.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 4</p>
-                </div>
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop5.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 5</p>
-                </div>
-                <div class="shops__item">
-                  <div class="cover-slide hover-darken inview">
-                    <div class="bg-img-zoom img-bg50" style="background-image: url(sample-portfolio/images/shop6.jpg);"></div>
-                  </div>
-                  <p class="shops__title">SHOP 6</p>
-                </div>
-                <div class="shops__btn">
-                  <button class="btn slide-bg">Button</button>
-                </div>
-              </div>
-            </section>
-            <section class="attention">
-              <div class="attention__header">
-                <h2 class="main-title">Attention</h2>
-                <p class="sub-title">Featured Shoes</p>
-                <div class="attention__inner">
-                  <div class="attention__container">
-                    <div class="attention__item">
-                      <div class="attention__img"><img src="/sample-portfolio/images/jordan.jpg" alt=""></div>
-                      <div class="attention__title">test</div>
+                <!-- 通常は各店舗のリンクをつけるが今回はしない。あくまでサンプル-->
+                <div class="shops__inner">
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop1.jpg);
+                        "
+                      ></div>
                     </div>
-                    <div class="attention__item">
-                      <div class="attention__img"><img src="/sample-portfolio/images/tora.jpg" alt=""></div>
-                      <div class="attention__title">test</div>
+                    <p class="shops__title">SHOP 1</p>
+                  </div>
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop2.jpg);
+                        "
+                      ></div>
                     </div>
-                    <div class="attention__item">
-                      <div class="attention__img"><img src="/sample-portfolio/images/image-p3.jpg" alt=""></div>
-                      <div class="attention__title">test</div>
+                    <p class="shops__title">SHOP 2</p>
+                  </div>
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop3.jpg);
+                        "
+                      ></div>
                     </div>
-                    <div class="attention__item">
-                      <div class="attention__img"><img src="/sample-portfolio/images/image-p4.jpg" alt=""></div>
-                      <div class="attention__title">test</div>
+                    <p class="shops__title">SHOP 3</p>
+                  </div>
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop4.jpg);
+                        "
+                      ></div>
                     </div>
-                    <div class="attention__btn">
-                      <button class="btn slide-bg">Button</button>
+                    <p class="shops__title">SHOP 4</p>
+                  </div>
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop5.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <p class="shops__title">SHOP 5</p>
+                  </div>
+                  <div class="shops__item">
+                    <div class="cover-slide hover-darken inview">
+                      <div
+                        class="bg-img-zoom img-bg50"
+                        style="
+                          background-image: url(sample-portfolio/images/shop6.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <p class="shops__title">SHOP 6</p>
+                  </div>
+                  <div class="shops__btn">
+                    <button class="btn slide-bg">Button</button>
+                  </div>
+                </div>
+              </section>
+              <section class="attention">
+                <div class="attention__header">
+                  <h2 class="main-title">Attention</h2>
+                  <p class="sub-title">Featured Shoes</p>
+                  <div class="attention__inner">
+                    <div class="attention__container">
+                      <div class="attention__item">
+                        <div class="attention__img">
+                          <img
+                            src="/sample-portfolio/images/jordan.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="attention__title">test</div>
+                      </div>
+                      <div class="attention__item">
+                        <div class="attention__img">
+                          <img src="/sample-portfolio/images/tora.jpg" alt="" />
+                        </div>
+                        <div class="attention__title">test</div>
+                      </div>
+                      <div class="attention__item">
+                        <div class="attention__img">
+                          <img
+                            src="/sample-portfolio/images/image-p3.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="attention__title">test</div>
+                      </div>
+                      <div class="attention__item">
+                        <div class="attention__img">
+                          <img
+                            src="/sample-portfolio/images/image-p4.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="attention__title">test</div>
+                      </div>
+                      <div class="attention__btn">
+                        <button class="btn slide-bg">Button</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
-          </main>
+              </section>
+            </main>
+          </div>
         </div>
+        <footer class="footer">
+          <div class="logo">
+            <img
+              src="sample-portfolio/images/logo-sample.svg"
+              alt=""
+              class="logo__img"
+            />
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__ul">
+              <li class="footer__li"><a href="#">Service</a></li>
+              <li class="footer__li"><a href="#">Contact</a></li>
+              <li class="footer__li"><a href="#">Sitemap</a></li>
+            </ul>
+            <div class="footer__copyright">&copy; SampleSite</div>
+          </nav>
+        </footer>
       </div>
+      <nav class="mobile-menu">
+        <div class="logo">
+          <img
+            src="sample-portfolio/images/logo-sample.svg"
+            alt=""
+            class="logo__img"
+          />
+        </div>
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Service</span>
+              <span class="sub-title">サービスについて</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">About</span>
+              <span class="sub-title">私たちについて</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Contact</span>
+              <span class="sub-title">コンタクト</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
+
     <!-- <div class="tween-animate-title">Animation Title</div> -->
-      <!-- <div class="cover-slide hover-darken">
+    <!-- <div class="cover-slide hover-darken">
         <img class="img-zoom" src="sample-portfolio/images/lion.jpg" alt="">
       </div>
 
@@ -172,6 +312,7 @@
     <script src="sample-portfolio/scripts/libs/scroll.js"></script>
     <script src="sample-portfolio/scripts/libs/textAnimation.js"></script>
     <script src="sample-portfolio/scripts/libs/hero-slider.js"></script>
+    <script src="sample-portfolio/scripts/libs/mobile-menu.js"></script>
     <script src="sample-portfolio/scripts/main.js"></script>
   </body>
 </html>

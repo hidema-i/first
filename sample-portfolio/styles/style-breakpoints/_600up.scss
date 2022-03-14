@@ -40,3 +40,14 @@
     align-items: flex-end;
   }
 }
+
+.footer {
+  & .logo {
+    justify-content: flex-start;
+  }
+
+  &__li {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}

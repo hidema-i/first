@@ -28,6 +28,17 @@
       box-shadow: none;
     }
   }
+  // &.filled2 {
+  //   background-color: beige;
+  //   color: red;
+  //   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+  //   &:hover {
+  //     background-color: $cWhite;
+  //     color: $cBlack;
+  //     box-shadow: none;
+  //   }
+  // }
 
   &.letter-spacing:hover {
     background-color: $cBlack;
@@ -81,7 +92,6 @@
       }
     }
   }
-
   &.cover-3d {
     position: relative;
     z-index: 1;
@@ -141,6 +151,7 @@
     text-align: center;
     transition: all 0.3s;
     transform-origin: center center -25px;
+    color: black;
   }
 
   & .hovering {
