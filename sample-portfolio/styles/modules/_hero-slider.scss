@@ -39,6 +39,7 @@
 
 .hero {
   overflow: hidden;
+  padding-top: $navHei;
   @extend .pb-lg;
 
   &__title {

@@ -1,17 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const hero = new HeroSlider(".swiper-container");
-  hero.start();
+  const main = new Main();
+});
 
-  const cb = function (el, isIntersecting) {
-    if (isIntersecting) {
-      const ta = new TweenTextAnimation(el);
-      ta.animate();
-    }
-  };
+class Main {
+  constructor() {
+    this.header = document.querySelector(".header");
+    this._observers = [];
+    this._init();
+  }
 
-  const so = new ScrollObserver(".tween-animate-title", cb);
+  set observers(val) {
+    this._observers.push(val);
+  }
 
-  const _inviewAnimation = function (el, inview) {
+  get observers() {
+    return this._observers;
+  }
+
+  _init() {
+    new MobileMenu();
+    this.hero = new HeroSlider(".swiper-container");
+    package.on("done", this._paceDone.bind(this));
+    this._scrollInit();
+  }
+  _paceDone() {
+    this._scrollInit();
+  }
+
+  _inviewAnimation(el, inview) {
     //画面に入ったらinviewというクラスを付与
     if (inview) {
       el.classList.add("inview");
@@ -19,22 +35,59 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       el.classList.remove("inview");
     }
-  };
-
-  const so2 = new ScrollObserver(".cover-slide", _inviewAnimation);
-});
-
-const _navAnimation = function (el, inview) {
-  const header = document.querySelector(".header");
-
-  if (inview) {
-    header.classList.remove("triggered");
-    //抜けたら削除する
-  } else {
-    header.classList.add("triggered");
   }
-};
 
-const so3 = new ScrollObserver(".nav-trigger", _navAnimation, { once: false });
+  _navAnimation(el, inview) {
+    if (inview) {
+      this.header.classList.remove("triggered");
+      //抜けたら削除する
+    } else {
+      this.header.classList.add("triggered");
+    }
+  }
 
-new MobileMenu();
+  _textAnimation(el, inview) {
+    if (inview) {
+      const ta = new TweenTextAnimation(el);
+      ta.animate();
+    }
+  }
+
+  _toggleSlideAnimation(el, inview) {
+    if (inview) {
+      this.hero.start();
+      //抜けたら削除する
+    } else {
+      this.hero.stop();
+    }
+  }
+
+  _destroyObservers() {
+    this.observers.forEach((object) => {
+      object.destroy();
+    });
+  }
+
+  destroy() {
+    this._destroyObservers();
+  }
+
+  _scrollInit() {
+    this.observers = new ScrollObserver(
+      ".nav-trigger",
+      this._navAnimation.bind(this),
+      { once: false }
+    );
+    this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(
+      ".tween-animate-title",
+      this._textAnimation
+    );
+    this.observers = new ScrollObserver(
+      ".swiper-container",
+      this._toggleSlideAnimation.bind(this),
+      { once: false }
+    );
+    console.log(this.observers);
+  }
+}
