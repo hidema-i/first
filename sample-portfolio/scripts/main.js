@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 class Main {
   constructor() {
     this.header = document.querySelector(".header");
+    this.sides = document.querySelectorAll(".side");
     this._observers = [];
     this._init();
   }
@@ -20,8 +21,8 @@ class Main {
   _init() {
     new MobileMenu();
     this.hero = new HeroSlider(".swiper-container");
-    package.on("done", this._paceDone.bind(this));
-    this._scrollInit();
+    Pace.on("done", this._paceDone.bind(this));
+    // this._scrollInit();
   }
   _paceDone() {
     this._scrollInit();
@@ -43,6 +44,15 @@ class Main {
       //抜けたら削除する
     } else {
       this.header.classList.add("triggered");
+    }
+  }
+
+  _sideAnimation(el, inview) {
+    if (inview) {
+      this.sides.forEach((side) => side.classList.add("inview"));
+      //抜けたら削除する
+    } else {
+      this.sides.forEach((side) => side.classList.remove("inview"));
     }
   }
 
@@ -79,6 +89,7 @@ class Main {
       { once: false }
     );
     this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(".appear", this._inviewAnimation);
     this.observers = new ScrollObserver(
       ".tween-animate-title",
       this._textAnimation
@@ -88,6 +99,10 @@ class Main {
       this._toggleSlideAnimation.bind(this),
       { once: false }
     );
-    console.log(this.observers);
+    this.observers = new ScrollObserver(
+      "#main-content",
+      this._sideAnimation.bind(this),
+      { once: false, rootMargin: "-300px 0px" }
+    );
   }
 }
