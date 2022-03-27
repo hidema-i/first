@@ -89,7 +89,7 @@ class Main {
       { once: false }
     );
     this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
-    this.observers = new ScrollObserver(".appear", this._inviewAnimation);
+    this.observers = new ScrollObserver(".appearance", this._inviewAnimation);
     this.observers = new ScrollObserver(
       ".tween-animate-title",
       this._textAnimation
